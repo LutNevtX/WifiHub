@@ -4,8 +4,9 @@ Aplikasi Android untuk mengelola server HTTP lokal langsung dari perangkat. Komp
 
 ## Unduh Aplikasi
 
-File APK siap pakai tersedia pada folder `release/`:
-- [Unduh WiFiShare.apk](release/WiFiShare.apk) (Versi Debug, 5.7 MB)
+Berkas APK siap pakai dapat diunduh langsung:
+- [Unduh WiFiShare.apk (Tautan Langsung)](https://github.com/LutNevtX/WifiHub/raw/main/release/WiFiShare.apk) (Versi Debug, 5.7 MB)
+- Jalur lokal dalam repository: [release/WiFiShare.apk](release/WiFiShare.apk)
 
 Pemasangan manual:
 1. Salin berkas `WiFiShare.apk` ke penyimpanan ponsel.
