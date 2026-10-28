@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Top Bar / Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WiFi Share"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_black"
+                    android:letterSpacing="-0.02" />
+
+                <TextView
+                    android:id="@+id/tvIpAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IP: Menunggu Wi-Fi"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_muted"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Rounded Pill Status Badge -->
+            <TextView
+                android:id="@+id/tvStatusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STANDBY"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:textColor="@color/color_black"
+                android:background="@drawable/bg_pill_badge_outline"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+        </LinearLayout>
+
+        <!-- Main Card: Local Connection Address -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/color_border"
+            app:cardBackgroundColor="@color/color_white"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOCAL NETWORK ADDRESS"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:textColor="@color/color_muted" />
+
+                <TextView
+                    android:id="@+id/tvServerUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="http://192.168.x.x:8080"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_black"
+                    android:fontFamily="monospace"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <!-- Rounded Pill Button Copy -->
+                    <Button
+                        android:id="@+id/btnCopyUrl"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/copy_url"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_black"
+                        app:cornerRadius="999dp"
+                        app:strokeColor="@color/color_black"
+                        app:strokeWidth="1dp"
+                        android:enabled="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Permission Notice (Minimalist Flat Pill Style) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/color_black"
+            app:cardBackgroundColor="@color/color_white"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IZIN PENYIMPANAN DIPERLUKAN"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:textColor="@color/color_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Izinkan akses semua berkas agar folder ponsel dapat dijelajahi dari browser PC."
+                    android:textSize="13sp"
+                    android:textColor="@color/color_muted"
+                    android:layout_marginTop="6dp" />
+
+                <Button
+                    android:id="@+id/btnGrantPermission"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="@string/permission_grant"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_black"
+                    app:cornerRadius="999dp"
+                    app:strokeColor="@color/color_black"
+                    app:strokeWidth="1dp"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Primary Large Rounded Pill Button -->
+        <Button
+            android:id="@+id/btnToggleServer"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/btn_start"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            app:cornerRadius="999dp"
+            android:backgroundTint="@color/color_black"
+            android:textColor="@color/color_white"
+            android:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="28dp" />
+
+        <!-- 1px Hairline Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_border"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Minimalist Instructions Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PANDUAN KONEKSI"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:textColor="@color/color_black"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Hubungkan HP dan PC / Laptop ke Wi-Fi yang sama.\n\n2. Tekan tombol 'Mulai Server' di atas.\n\n3. Buka browser di PC dan kunjungi alamat IP yang tertera.\n\n4. Folder dan berkas HP Anda siap dijelajahi dan diunduh."
+                android:textSize="13sp"
+                android:textColor="@color/color_muted"
+                android:lineSpacingExtra="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

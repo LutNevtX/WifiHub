@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strictly Two Colors: Pure Black & Pure White -->
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    
+    <!-- Hairline border & subtle text tone derived strictly from monochrome -->
+    <color name="color_border">#000000</color>
+    <color name="color_muted">#4B5563</color>
+</resources>

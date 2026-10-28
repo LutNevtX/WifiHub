@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WiFi File Share</string>
+    <string name="server_title">Local File Server</string>
+    <string name="status_stopped">Server Nonaktif</string>
+    <string name="status_running">Server Aktif</string>
+    <string name="btn_start">Mulai Server</string>
+    <string name="btn_stop">Hentikan Server</string>
+    <string name="copy_url">Salin Alamat</string>
+    <string name="permission_grant">Izinkan Akses Semua Berkas</string>
+</resources>
+
